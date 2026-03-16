@@ -3,7 +3,7 @@ const portfolioData = [
     "id": 0,
     "filename": "000.jpg",
     "title": "Project 000",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "description": "Architecture as a parametric, integrated system of open, solid, and semi-outdoor spaces, composed in harmony with and adaptively responding to the surrounding contextual fabric and environment."
   },
   {
     "id": 1,
