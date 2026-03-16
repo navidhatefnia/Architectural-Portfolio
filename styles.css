@@ -192,6 +192,12 @@ h3 {
 /* Main Image Container */
 .main-image-container {
     flex-grow: 1;
+    aspect-ratio: 16 / 11;
+    /* Uniform aspect ratio for architectural presentation */
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
@@ -200,9 +206,9 @@ h3 {
 
 .main-image-container img {
     width: 100%;
-    height: auto;
-    max-height: 85vh;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
     display: block;
     transition: transform 1.5s ease;
 }
