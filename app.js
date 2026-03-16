@@ -12,10 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
         itemElement.classList.add("gallery-item");
 
         itemElement.innerHTML = `
-            <img src="assets/images/${item.filename}" alt="${item.title}" loading="lazy" />
-            <div class="item-info">
-                <h2>${item.title}</h2>
-                <p>${item.description}</p>
+            <div class="gallery-item-layout">
+                <div class="placeholders-column">
+                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[0] ? item.placeholders[0] : ''}" style="display: ${item.placeholders && item.placeholders[0] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
+                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[1] ? item.placeholders[1] : ''}" style="display: ${item.placeholders && item.placeholders[1] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
+                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[2] ? item.placeholders[2] : ''}" style="display: ${item.placeholders && item.placeholders[2] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
+                </div>
+                <div class="main-image-container">
+                    <img src="assets/images/${item.filename}" alt="${item.title}" loading="lazy" />
+                    <div class="item-info">
+                        <h2>${item.title}</h2>
+                        <p>${item.description}</p>
+                    </div>
+                </div>
             </div>
         `;
         galleryContainer.appendChild(itemElement);

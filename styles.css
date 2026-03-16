@@ -1,7 +1,8 @@
 :root {
     --bg-color: #050505;
     --text-color: #f0f0f0;
-    --accent-color: #d4af37; /* subtle gold */
+    --accent-color: #d4af37;
+    /* subtle gold */
     --glass-bg: rgba(15, 15, 15, 0.65);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -20,7 +21,9 @@ body {
 }
 
 /* Typography styles */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
@@ -103,13 +106,20 @@ h1, h2, h3 {
 }
 
 @keyframes scroll {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(15px); opacity: 0; }
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
 }
 
 /* Gallery Layout */
 .gallery {
-    padding: 4rem 10%;
+    padding: 4rem 5%;
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -118,10 +128,8 @@ h1, h2, h3 {
 .gallery-item {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
     opacity: 0;
     transform: translateY(100px);
     transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -132,7 +140,66 @@ h1, h2, h3 {
     transform: translateY(0);
 }
 
-.gallery-item img {
+/* NEW LAYOUT: Flexbox layout for Side Placeholders + Main Image */
+.gallery-item-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+/* 3 Square Placeholders */
+.placeholders-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight glass look */
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text shown when no image */
+.placeholder::before {
+    content: "Diagram / Photo";
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    font-weight: 300;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    /* Sits above text */
+}
+
+/* Main Image Container */
+.main-image-container {
+    flex-grow: 1;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.main-image-container img {
     width: 100%;
     height: auto;
     max-height: 85vh;
@@ -141,7 +208,7 @@ h1, h2, h3 {
     transition: transform 1.5s ease;
 }
 
-.gallery-item:hover img {
+.gallery-item:hover .main-image-container img {
     transform: scale(1.03);
 }
 
@@ -172,7 +239,7 @@ h1, h2, h3 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #fff;
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .item-info p {
@@ -193,15 +260,43 @@ footer {
 }
 
 /* Responsive adjustments */
+@media (max-width: 900px) {
+    .gallery-item-layout {
+        flex-direction: column-reverse;
+        /* Stack images below main photo on small screens */
+        gap: 1.5rem;
+    }
+
+    .placeholders-column {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .placeholder {
+        width: 30%;
+        /* 3 in a row */
+    }
+}
+
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 3rem; }
-    .gallery { padding: 2rem 5%; gap: 4rem; }
-    .item-info { 
-        bottom: 1rem; 
-        left: 1rem; 
-        right: 1rem; 
-        max-width: none; 
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .gallery {
+        padding: 2rem 5%;
+        gap: 4rem;
+    }
+
+    .item-info {
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
         padding: 1.5rem;
     }
-    .item-info h2 { font-size: 1.5rem; }
+
+    .item-info h2 {
+        font-size: 1.5rem;
+    }
 }
