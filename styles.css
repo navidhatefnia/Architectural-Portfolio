@@ -192,8 +192,8 @@ h3 {
 /* Main Image Container */
 .main-image-container {
     flex-grow: 1;
-    aspect-ratio: 16 / 11;
-    /* Uniform aspect ratio for architectural presentation */
+    aspect-ratio: 3 / 2;
+    /* Optimized ratio based on image analysis */
     background-color: #fff;
     display: flex;
     align-items: flex-start;
