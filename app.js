@@ -11,12 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const itemElement = document.createElement("article");
         itemElement.classList.add("gallery-item");
 
+        const baseName = item.filename.split('.').slice(0, -1).join('.');
+        const extension = item.filename.split('.').pop();
+
+        // Potential placeholder paths
+        const placeholderPaths = [
+            `assets/images/${baseName}_1.jpg`,
+            `assets/images/${baseName}_2.jpg`,
+            `assets/images/${baseName}_3.jpg`
+        ];
+
         itemElement.innerHTML = `
             <div class="gallery-item-layout">
                 <div class="placeholders-column">
-                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[0] ? item.placeholders[0] : ''}" style="display: ${item.placeholders && item.placeholders[0] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
-                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[1] ? item.placeholders[1] : ''}" style="display: ${item.placeholders && item.placeholders[1] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
-                    <div class="placeholder"><img src="${item.placeholders && item.placeholders[2] ? item.placeholders[2] : ''}" style="display: ${item.placeholders && item.placeholders[2] ? 'block' : 'none'};" alt="" onerror="this.style.display='none'" /></div>
+                    ${placeholderPaths.map(path => `
+                        <div class="placeholder">
+                            <img src="${path}" 
+                                 onload="this.style.display='block'; this.parentElement.classList.add('has-image')" 
+                                 onerror="this.style.display='none'; this.parentElement.classList.remove('has-image')" 
+                                 style="display:none;" />
+                        </div>
+                    `).join('')}
                 </div>
                 <div class="main-image-container">
                     <img src="assets/images/${item.filename}" alt="${item.title}" loading="lazy" />
@@ -37,19 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.15
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             } else {
-                // Remove visible class when out of view to allow re-animation when scrolling back up
                 entry.target.classList.remove('visible');
             }
         });
     }, observerOptions);
 
-    const galleryItems = document.querySelectorAll(".gallery-item");
-    galleryItems.forEach(item => {
+    document.querySelectorAll(".gallery-item").forEach(item => {
         observer.observe(item);
     });
 });
