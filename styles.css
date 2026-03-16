@@ -211,19 +211,14 @@ h3 {
     transform: scale(1.03);
 }
 
-/* Glassmorphism Text Box */
+/* Text Box */
 .item-info {
     position: absolute;
     bottom: 2rem;
     left: 2rem;
     max-width: 500px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    padding: 1rem;
     transform: translateY(20px);
     opacity: 0;
     transition: all 0.8s ease 0.3s;
@@ -237,15 +232,17 @@ h3 {
 .item-info h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #fff;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: #000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* Subtle white glow to ensure readability on dark images */
 }
 
 .item-info p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #ddd;
-    font-weight: 300;
+    color: #111;
+    font-weight: 400;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 /* Footer */
