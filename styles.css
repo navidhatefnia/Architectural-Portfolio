@@ -192,8 +192,8 @@ h3 {
 /* Main Image Container */
 .main-image-container {
     flex-grow: 1;
-    aspect-ratio: 3 / 2;
-    /* Optimized ratio based on image analysis */
+    aspect-ratio: 4 / 3;
+    /* Narrower ratio to eliminate side columns; wider images will have padding at bottom */
     background-color: #fff;
     display: flex;
     align-items: flex-start;
