@@ -151,8 +151,7 @@ h3 {
 .placeholders-column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 1.5rem;
+    justify-content: space-between;
     width: 200px;
     flex-shrink: 0;
 }
