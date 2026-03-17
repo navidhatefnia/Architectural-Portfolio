@@ -128,7 +128,8 @@ h3 {
 .gallery-item {
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1900px;
+    /* Increased to accommodate 1536px main image + 340px side column */
     margin: 0 auto;
     opacity: 0;
     transform: translateY(100px);
