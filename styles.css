@@ -184,11 +184,8 @@ h3 {
 }
 
 /* Main Image Container */
-/* Main Image Container */
 .main-image-container {
     flex-grow: 1;
-    max-width: 900px;
-    /* Limit main image size for better balance */
     position: relative;
     border-radius: 16px;
     overflow: hidden;
@@ -197,7 +194,7 @@ h3 {
 
 .main-image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 1.5s ease;
@@ -265,8 +262,9 @@ footer {
     }
 
     .placeholder {
-        width: 30%;
-        /* 3 in a row */
+        width: 32%;
+        /* Adjusted for 3 in a row with small gap */
+        aspect-ratio: 1 / 1;
     }
 }
 
