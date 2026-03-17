@@ -3,7 +3,7 @@ const portfolioData = [
     "id": 0,
     "filename": "000.jpg",
     "title": "Manifesto",
-    "description": "Architecture as a parametric, integrated system of open, solid, and semi-outdoor spaces, composed in harmony with and adaptively responding to the surrounding contextual fabric and environment."
+    "description": "Architecture as a parametric, integrated system program of open, solid, and semi-outdoor spaces, composed in harmony with and adaptively responding to the surrounding contextual fabric and environment."
   },
   {
     "id": 1,
