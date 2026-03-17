@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="placeholder">
                             <img src="${path}" 
                                  onload="this.style.display='block'; this.parentElement.classList.add('has-image')" 
-                                 onerror="this.style.display='none'; this.parentElement.classList.remove('has-image')" 
+                                 onerror="if(this.src.endsWith('.jpg')) { this.src = this.src.replace('.jpg', '.png'); } else { this.style.display='none'; this.parentElement.classList.remove('has-image'); }" 
                                  style="display:none;" />
                         </div>
                     `).join('')}
