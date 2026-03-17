@@ -147,6 +147,8 @@ h3 {
     gap: 2px;
     /* Precision gap: 3x340px + 2x2px = 1024px proportional height */
     align-items: stretch;
+    justify-content: flex-end;
+    /* Push to the right as requested */
 }
 
 /* 3 Square Placeholders */
@@ -186,13 +188,16 @@ h3 {
 
 /* Main Image Container */
 .main-image-container {
-    flex-grow: 1;
-    aspect-ratio: 1536 / 1024;
-    /* Precision 1.5 ratio as requested */
+    width: 1536px;
+    /* Lock to exact requested width */
+    height: 1024px;
+    /* Lock to exact requested height (3 x 340px + 4px gaps) */
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    /* Don't let it shrink */
 }
 
 .main-image-container img {
