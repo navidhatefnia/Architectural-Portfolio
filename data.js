@@ -118,17 +118,5 @@ const portfolioData = [
     "filename": "019.png",
     "title": "Project 019",
     "description": "Architectural Design Experience. Edit this in data.js."
-  },
-  {
-    "id": 20,
-    "filename": "020.png",
-    "title": "Project 020",
-    "description": "Architectural Design Experience. Edit this in data.js."
-  },
-  {
-    "id": 21,
-    "filename": "021.png",
-    "title": "Project 021",
-    "description": "Architectural Design Experience. Edit this in data.js."
   }
 ];
