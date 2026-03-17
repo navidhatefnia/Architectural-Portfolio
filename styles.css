@@ -143,8 +143,8 @@ h3 {
 /* NEW LAYOUT: Flexbox layout for Side Placeholders + Main Image */
 .gallery-item-layout {
     display: flex;
-    gap: 0.5rem;
-    /* Minimum gap as requested */
+    gap: 2px;
+    /* Precision gap: 3x340px + 2x2px = 1024px proportional height */
     align-items: stretch;
 }
 
@@ -153,8 +153,8 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
-    /* Bigger side images */
+    width: 340px;
+    /* Exact size requested */
     flex-shrink: 0;
 }
 
@@ -164,8 +164,8 @@ h3 {
     background: rgba(255, 255, 255, 0.05);
     /* Slight glass look */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Solid but subtle */
-    border-radius: 8px;
+    border-radius: 4px;
+    /* Sharper architectural edges */
     overflow: hidden;
     position: relative;
     display: flex;
@@ -186,8 +186,10 @@ h3 {
 /* Main Image Container */
 .main-image-container {
     flex-grow: 1;
+    aspect-ratio: 1536 / 1024;
+    /* Precision 1.5 ratio as requested */
     position: relative;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
