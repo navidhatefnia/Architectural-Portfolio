@@ -143,7 +143,8 @@ h3 {
 /* NEW LAYOUT: Flexbox layout for Side Placeholders + Main Image */
 .gallery-item-layout {
     display: flex;
-    gap: 3rem;
+    gap: 0.5rem;
+    /* Minimum gap as requested */
     align-items: stretch;
 }
 
@@ -152,7 +153,8 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 200px;
+    width: 300px;
+    /* Bigger side images */
     flex-shrink: 0;
 }
 
@@ -161,8 +163,9 @@ h3 {
     aspect-ratio: 1 / 1;
     background: rgba(255, 255, 255, 0.05);
     /* Slight glass look */
-    border: 1px dashed rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Solid but subtle */
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -170,16 +173,7 @@ h3 {
     justify-content: center;
 }
 
-/* Text shown when no image */
-.placeholder::before {
-    content: "Diagram / Photo";
-    position: absolute;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
-    font-weight: 300;
-    pointer-events: none;
-    z-index: 1;
-}
+/* Removed Diagram / Photo text */
 
 .placeholder img {
     width: 100%;
@@ -193,6 +187,8 @@ h3 {
 /* Main Image Container */
 .main-image-container {
     flex-grow: 1;
+    max-width: 900px;
+    /* Limit main image size for better balance */
     position: relative;
     border-radius: 16px;
     overflow: hidden;
