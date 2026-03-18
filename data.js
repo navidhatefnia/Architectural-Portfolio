@@ -110,25 +110,25 @@ const portfolioData = [
   {
     "id": 18,
     "filename": "018.png",
-    "title": "Project 018",
-    "description": "Architectural design experience. Edit this in data.js."
-  },
-  {
-    "id": 19,
-    "filename": "019.png",
     "title": "Amphitheater cultural center",
     "description": "A complex in a hot, dry climate."
   },
   {
-    "id": 20,
-    "filename": "020.png",
+    "id": 19,
+    "filename": "019.png",
     "title": "Bank headquarters",
     "description": "In a temperate climate."
   },
   {
-    "id": 21,
-    "filename": "021.png",
+    "id": 20,
+    "filename": "020.png",
     "title": "Shopping center",
     "description": "In a temperate, rainy climate."
+  },
+  {
+    "id": 21,
+    "filename": "021.png",
+    "title": "Comercial and Office complex",
+    "description": "In a temperate climate."
   }
 ];
