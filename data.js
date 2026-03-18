@@ -3,132 +3,132 @@ const portfolioData = [
     "id": 0,
     "filename": "000.png",
     "title": "Manifesto",
-    "description": "Architecture as a parametric, integrated system program of open, solid, and semi-outdoor spaces, composed in harmony with and adaptively responding to the surrounding contextual fabric and environment."
+    "description": "Architecture as a parametric, integrated system of open, solid, and semi-outdoor spaces, composed in harmony with and adaptively responding to the surrounding contextual fabric and environment."
   },
   {
     "id": 1,
     "filename": "001.png",
-    "title": "Project 001",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Commercial",
+    "description": "A commercial complex in a tropical climate."
   },
   {
     "id": 2,
     "filename": "002.png",
-    "title": "Project 002",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Commercial",
+    "description": "A commercial complex in a tropical climate."
   },
   {
     "id": 3,
     "filename": "003.png",
-    "title": "Project 003",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Traffic center",
+    "description": "Headquarters office of the traffic department."
   },
   {
     "id": 4,
     "filename": "004.png",
-    "title": "Project 004",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "State agricultural headquarters",
+    "description": "Designed in a temperate, humid, and rainy climate."
   },
   {
     "id": 5,
     "filename": "005.png",
-    "title": "Project 005",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "State agricultural headquarters",
+    "description": "Oriented east to west to maximize natural light and ventilation."
   },
   {
     "id": 6,
     "filename": "006.png",
-    "title": "Project 006",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Executive resort",
+    "description": "A harmonious business and leisure complex in a tropical climate."
   },
   {
     "id": 7,
     "filename": "007.png",
-    "title": "Project 007",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Summit view hotel complex",
+    "description": "A multistory hotel with a set of villas on a hill, in a temperate, dry climate."
   },
   {
     "id": 8,
     "filename": "008.png",
-    "title": "Project 008",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Learning and business hub",
+    "description": "An educational office complex in a temperate, humid climate, designed to maximize natural light and ventilation."
   },
   {
     "id": 9,
     "filename": "009.png",
-    "title": "Project 009",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Cultural center",
+    "description": "A cultural center in a cold, dry area within a public park."
   },
   {
     "id": 10,
     "filename": "010.png",
-    "title": "Project 010",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Commercial business complex",
+    "description": "In a hot, dry climate, designed to maximize efficiency and accessibility."
   },
   {
     "id": 11,
     "filename": "011.png",
-    "title": "Project 011",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Library complex",
+    "description": "A library with administrative spaces in a hot, dry climate."
   },
   {
     "id": 12,
     "filename": "012.png",
-    "title": "Project 012",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Sport complex",
+    "description": "In a tropical climate."
   },
   {
     "id": 13,
     "filename": "013.png",
-    "title": "Project 013",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Sport complex",
+    "description": "In a tropical climate."
   },
   {
     "id": 14,
     "filename": "014.png",
-    "title": "Project 014",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Residential",
+    "description": "A complex in a hot and humid climate."
   },
   {
     "id": 15,
     "filename": "015.png",
-    "title": "Project 015",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Cultural center",
+    "description": "A cultural center in a public park."
   },
   {
     "id": 16,
     "filename": "016.png",
-    "title": "Project 016",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Sport center",
+    "description": "A sport center in an industrial context with a tropical climate."
   },
   {
     "id": 17,
     "filename": "017.png",
-    "title": "Project 017",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Residential, office and commercial complex",
+    "description": "In a cold and dry climate."
   },
   {
     "id": 18,
     "filename": "018.png",
     "title": "Project 018",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "description": "Architectural design experience. Edit this in data.js."
   },
   {
     "id": 19,
     "filename": "019.png",
-    "title": "Project 019",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Amphitheater cultural center",
+    "description": "A complex in a hot, dry climate."
   },
   {
     "id": 20,
     "filename": "020.png",
-    "title": "Project 020",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Bank headquarters",
+    "description": "In a temperate climate."
   },
   {
     "id": 21,
     "filename": "021.png",
-    "title": "Project 021",
-    "description": "Architectural Design Experience. Edit this in data.js."
+    "title": "Shopping center",
+    "description": "In a temperate, rainy climate."
   }
 ];
